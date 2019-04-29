@@ -1,0 +1,18 @@
+@charset "utf-8";  // 解决sass中文注释报错
+@function rem($px){
+	@return ($px/100)*1rem;
+}
+
+.content {
+	button {
+		display: block;
+		margin: 0 auto;
+		width: rem(180);
+		height: rem(60);
+		border: none;
+		outline-style: none;
+		background-color: #ff4019;
+		color: #fff;
+		border-radius: rem(6);
+	}
+}

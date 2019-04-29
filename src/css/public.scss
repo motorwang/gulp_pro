@@ -1,0 +1,79 @@
+@charset "utf-8";  // 解决sass中文注释报错
+@function rem($px){
+	@return ($px/100)*1rem;
+}
+
+@import "../lib/fonts/iconfont.css";  // iconfont
+
+html, body {
+	padding: 0;
+	margin: 0;
+}
+div, p,
+h1, h2, h3, h4, h5, h6,
+ul, li, ol, li,
+a, span, i,
+header, footer {
+	padding: 0;
+	margin: 0;
+	list-style: none;
+	text-decoration: none;
+	font-size: rem(28);
+	color: #000;
+}
+
+
+.header{
+	width: 100%;
+	height: rem(80);
+	background-color: #ff4019;
+	color: #fff;
+	text-align: center;
+	line-height: rem(80);
+}
+
+.footer {
+	width: 100%;
+	height: rem(86);
+	padding-top: 2px;
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	border-top: 1px solid #ededed;
+	box-sizing: border-box;
+
+	ul {
+		height: 100%;
+		overflow: hidden;
+
+		li {
+			width: 20%;
+			height: 100%;
+			float: left;
+			text-align: center;
+			>a {
+				display: block;
+				i {
+					display: block;
+					width: rem(48);
+					height: rem(48);
+					font-size: rem(36);
+					margin: 0 auto;
+					color: #3d3d3d;
+				}
+				span {
+					display: block;
+					font-size: rem(26);
+					color: #3d3d3d;
+				}
+			}
+		}
+
+		.active {
+			i, span {
+				color: #ff4019;
+			}
+
+		}
+	}
+}

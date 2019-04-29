@@ -1,0 +1,13 @@
+@charset "utf-8";  // 解决sass中文注释报错
+@function rem($px){
+    @return ($px/100)*1rem;
+}
+
+
+.content {
+    p {
+        color: #ff4019;
+        font-size: rem(26);
+        background: #fff;
+    }
+}
